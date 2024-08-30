@@ -72,16 +72,16 @@ const images = [
 const createGallery = images => {
   let items = '';
   images.forEach(photo => {
-    items += `
-  <li class="gallery-item">
-  <a class="gallery-link" href=${photo.original}>
-    <img
-      class="gallery-image"
-      src=${photo.preview}   
-      alt=${photo.description}
-    />
-  </a>
-</li>`;
+    items += '
+      <li class="gallery-item">
+      <a class="gallery-link" href=${photo.original}>
+        <img
+          class="gallery-image"
+          src=${photo.preview}   
+          alt=${photo.description}
+        />
+      </a>
+    </li>';
   });
   gallery.insertAdjacentHTML('afterbegin', items);
 };
